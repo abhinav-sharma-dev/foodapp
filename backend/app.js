@@ -9,7 +9,7 @@ const app = express();
 const port = 5000;
 
 app.use(cors({
-  origin: 'http://localhost:3000',
+  origin: ['http://localhost:3000', 'http://foodapp99.s3-website.ap-south-1.amazonaws.com'],
   methods: ['GET', 'POST', 'PUT', 'DELETE'],
   allowedHeaders: ['Content-Type', 'Authorization']
 }));
