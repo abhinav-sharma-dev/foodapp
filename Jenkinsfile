@@ -3,7 +3,7 @@ pipeline {
 
     environment {
         AWS_DEFAULT_REGION = 'ap-south-1'
-        S3_BUCKET = 'your-bucket-name'
+        S3_BUCKET = 'foodapp99'
     }
 
     stages {
