@@ -8,11 +8,25 @@ const OrderData = require('./Routes/OrderData');
 const app = express();
 const port = 5000;
 
+const allowedOrigins = [
+  "http://localhost:3000",
+  "http://foodapp99.s3-website.ap-south-1.amazonaws.com"
+];
+
 app.use(cors({
-  origin: ['http://localhost:3000', 'http://foodapp99.s3-website.ap-south-1.amazonaws.com'],
-  methods: ['GET', 'POST', 'PUT', 'DELETE'],
-  allowedHeaders: ['Content-Type', 'Authorization']
+  origin: function (origin, callback) {
+    if (!origin || allowedOrigins.includes(origin)) {
+      callback(null, true);
+    } else {
+      callback(new Error("Not allowed by CORS"));
+    }
+  },
+  methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
+  credentials: true
 }));
+
+app.options("*", cors()); // handle preflight
+
 
 app.use(express.json());
 
@@ -26,7 +40,7 @@ const startServer = async () => {
   app.use('/api', OrderData);
 
   app.get('/', (req, res) => {
-    res.send("Hello World");
+    res.send("Hello World from Express!");
     
   });
 
