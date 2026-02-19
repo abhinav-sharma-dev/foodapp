@@ -37,9 +37,6 @@ pipeline {
                     credentialsId: 'aws-s3-creds'
                 ]]) {
                     sh '''
-                        curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
-                        unzip awscliv2.zip
-                        ./aws/install
                         aws s3 sync frontend/build/ s3://$S3_BUCKET --delete
                     '''
                 }
