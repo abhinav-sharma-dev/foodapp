@@ -4,7 +4,7 @@ pipeline {
     environment {
         // Backend Config
         EC2_HOST = '65.0.185.151'
-        PROJECT_DIR = '/home/ubuntu/foodapp'
+        PROJECT_DIR = '/home/ubuntu/foodapp/backend'
 
         // AWS / Frontend Config
         AWS_DEFAULT_REGION = 'ap-south-1'
