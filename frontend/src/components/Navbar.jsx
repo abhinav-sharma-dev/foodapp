@@ -66,9 +66,6 @@ export default function Navbar({ search, setSearch }) {
             <li className="nav-item">
               <Link className="nav-link" to="/contact">Contact</Link>
             </li>
-            <li className="nav-item">
-              <Link className="nav-link" to="/contact">Contact 2</Link>
-            </li>
             {localStorage.getItem("authToken") ? (
               <li className="nav-item">
                 <Link className="nav-link text-success" to="/myorders">My Orders</Link>

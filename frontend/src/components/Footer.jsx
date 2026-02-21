@@ -12,7 +12,7 @@ export default function Footer() {
           >
           </Link>
           <span className="mb-3 mb-md-0 text-white">
-            © 2024 Company, Inc
+            © 2026 Company, Inc
           </span>
         </div>
         <ul className="nav col-md-4 justify-content-end list-unstyled d-flex">

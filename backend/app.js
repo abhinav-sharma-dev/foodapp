@@ -6,7 +6,7 @@ const DisplayData = require('./Routes/DisplayData');
 const OrderData = require('./Routes/OrderData');
 
 const app = express();
-const port = 5000;
+const port = process.env.PORT || 5000;
 
 const allowedOrigins = [
   "http://localhost:3000",
@@ -40,7 +40,7 @@ const startServer = async () => {
   app.use('/api', OrderData);
 
   app.get('/', (req, res) => {
-    res.send("Hello World from Express!");
+    res.send("Hello World from Express! Testing 123");
     
   });
 
