@@ -4,17 +4,20 @@ import { Link, useNavigate } from 'react-router-dom';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 
+
+
 const Login = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const navigate = useNavigate();
+  // const backendUrl =  || 'http://localhost:5000';
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     
     try {
 
-      const response = await fetch(`http://65.0.185.151:5000/api/login?timeout=${Date.now()}`, {
+      const response = await fetch(`http://13.126.62.105:5000/api/login?timeout=${Date.now()}`, {
         method: 'POST',
         body: JSON.stringify({ email, password }),
         headers: { 'Content-Type': 'application/json' }
