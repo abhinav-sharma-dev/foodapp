@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     environment {
-        EC2_HOST = '65.0.185.151'
+        EC2_HOST = '13.126.240.38'
         PROJECT_ROOT = '/home/ubuntu/foodapp'
         BACKEND_DIR = '/home/ubuntu/foodapp/backend'
 
