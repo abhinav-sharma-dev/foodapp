@@ -40,7 +40,7 @@ const startServer = async () => {
   app.use('/api', OrderData);
 
   app.get('/', (req, res) => {
-    res.send("Hello World from Express! Testing 123");
+    res.send("Hello World from Express!");
     
   });
 
